@@ -99,9 +99,9 @@ protected:
 private:
 	// Optional classes that is cached for passing to the inner class.
 	UPROPERTY()
-	UPrintWidgetOptions* CachedPrintOptions;
+	TObjectPtr<UPrintWidgetOptions> CachedPrintOptions;
 	UPROPERTY()
-	URestoreWidgetOptions* CachedRestoreOptions;
+	TObjectPtr<URestoreWidgetOptions> CachedRestoreOptions;
 
 	// The inner printer running so that it is not destroyed.
 	TSharedPtr<GraphPrinter::IInnerWidgetPrinter> InnerPrinter;
